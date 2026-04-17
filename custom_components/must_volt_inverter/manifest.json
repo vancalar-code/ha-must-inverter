@@ -1,6 +1,6 @@
 {
-  "domain": "must_inverter",
-  "name": "Must Inverter",
+  "domain": "must_volt_inverter",
+  "name": "Volt Inverter",
   "codeowners": ["@mukaschultze"],
   "config_flow": true,
   "dependencies": [],
