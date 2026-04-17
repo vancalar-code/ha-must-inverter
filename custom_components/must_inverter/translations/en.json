@@ -217,7 +217,30 @@
       "batteryvlowfault": { "name": "Battery Low Voltage Fault" },
       "batteryvlowrecover": { "name": "Battery Low Voltage Recover" },
       "maximumchargecurrent": { "name": "Maximum Charge Current" },
-      "maximumdischargecurrent": { "name": "Maximum Discharge Current" }
+      "maximumdischargecurrent": { "name": "Maximum Discharge Current" },
+      "maximumgridchargecurrent": { "name": "Maximum Grid Charge Current" },
+      "constantchargev": { "name": "Constant Charge Voltage" },
+      "floatchargev": { "name": "Float Charge Voltage" },
+      "mincurrentchargevoltage": { "name": "Min Current Charge Voltage" },
+      "mincurrentchargecurrent": { "name": "Min Current Charge Current" },
+      "mincurrentchargesoc": { "name": "Min Current Charge SOC" },
+      "batteryvlowalarm": { "name": "Battery Low Voltage Alarm" },
+      "batterysoclowalarm": { "name": "Battery SOC Low Alarm" },
+      "eqchargevoltage": { "name": "EQ Charge Voltage" },
+      "usermodebatvmax": { "name": "User Mode Battery Voltage Max" },
+      "usermodebattvmin": { "name": "User Mode Battery Voltage Min" },
+      "wmsochigh": { "name": "Work Mode SOC High" },
+      "wmsoclow": { "name": "Work Mode SOC Low" },
+      "bmstype": { "name": "BMS Type" },
+      "batterysoclowfault": { "name": "Battery SOC Low Fault" },
+      "batterysoclowrecover": { "name": "Battery SOC Low Recover" },
+      "rtcyear": { "name": "RTC Year" },
+      "rtcmonth": { "name": "RTC Month" },
+      "rtcday": { "name": "RTC Day" },
+      "rtcdayoftheweek": { "name": "RTC Day Of The Week" },
+      "rtchour": { "name": "RTC Hour" },
+      "rtcminutes": { "name": "RTC Minutes" },
+      "rtcseconds": { "name": "RTC Seconds" }
     },
     "select": {
       "batterytype": {
@@ -276,6 +299,66 @@
       },
       "advmodedefault": {
         "name": "Advanced Mode Default Work Mode",
+        "state": {
+          "store_mode": "Store Mode",
+          "load_first": "Load First",
+          "battery_first": "Battery First",
+          "grid_first": "Grid First",
+          "advanced_mode": "Advanced Mode"
+        }
+      },
+      "advmodet1workmode": {
+        "name": "Adv Mode T1 Work Mode",
+        "state": {
+          "store_mode": "Store Mode",
+          "load_first": "Load First",
+          "battery_first": "Battery First",
+          "grid_first": "Grid First",
+          "advanced_mode": "Advanced Mode"
+        }
+      },
+      "advmodet2workmode": {
+        "name": "Adv Mode T2 Work Mode",
+        "state": {
+          "store_mode": "Store Mode",
+          "load_first": "Load First",
+          "battery_first": "Battery First",
+          "grid_first": "Grid First",
+          "advanced_mode": "Advanced Mode"
+        }
+      },
+      "advmodet3workmode": {
+        "name": "Adv Mode T3 Work Mode",
+        "state": {
+          "store_mode": "Store Mode",
+          "load_first": "Load First",
+          "battery_first": "Battery First",
+          "grid_first": "Grid First",
+          "advanced_mode": "Advanced Mode"
+        }
+      },
+      "advmodet4workmode": {
+        "name": "Adv Mode T4 Work Mode",
+        "state": {
+          "store_mode": "Store Mode",
+          "load_first": "Load First",
+          "battery_first": "Battery First",
+          "grid_first": "Grid First",
+          "advanced_mode": "Advanced Mode"
+        }
+      },
+      "advmodet5workmode": {
+        "name": "Adv Mode T5 Work Mode",
+        "state": {
+          "store_mode": "Store Mode",
+          "load_first": "Load First",
+          "battery_first": "Battery First",
+          "grid_first": "Grid First",
+          "advanced_mode": "Advanced Mode"
+        }
+      },
+      "advmodet6workmode": {
+        "name": "Adv Mode T6 Work Mode",
         "state": {
           "store_mode": "Store Mode",
           "load_first": "Load First",
@@ -470,7 +553,19 @@
     },
     "time": {
       "batteryequalizationstarttime": { "name": "Battery Equalization Start Time" },
-      "batteryequalizationendtime": { "name": "Battery Equalization End Time" }
+      "batteryequalizationendtime": { "name": "Battery Equalization End Time" },
+      "advmodet1start": { "name": "Adv Mode T1 Start" },
+      "advmodet1end": { "name": "Adv Mode T1 End" },
+      "advmodet2start": { "name": "Adv Mode T2 Start" },
+      "advmodet2end": { "name": "Adv Mode T2 End" },
+      "advmodet3start": { "name": "Adv Mode T3 Start" },
+      "advmodet3end": { "name": "Adv Mode T3 End" },
+      "advmodet4start": { "name": "Adv Mode T4 Start" },
+      "advmodet4end": { "name": "Adv Mode T4 End" },
+      "advmodet5start": { "name": "Adv Mode T5 Start" },
+      "advmodet5end": { "name": "Adv Mode T5 End" },
+      "advmodet6start": { "name": "Adv Mode T6 Start" },
+      "advmodet6end": { "name": "Adv Mode T6 End" }
     }
   }
 }
