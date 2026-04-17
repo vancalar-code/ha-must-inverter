@@ -60,10 +60,9 @@ class MustInverterNumber(NumberEntity):
         self.async_write_ha_state()
 
     @property
-    def native_value(self):
+    def state(self):
         if self._key in self._inverter.data:
             return self._inverter.data[self._key] * self._coeff
-        return None
 
     async def async_set_native_value(self, value: float) -> None:
         integer = int(round(value / self._coeff))
