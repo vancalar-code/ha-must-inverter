@@ -1,5 +1,5 @@
 {
-  "name": "Must Inverter",
+  "name": "Volt Inverter",
   "hide_default_branch": true,
   "homeassistant": "2025.1.4",
   "render_readme": true
