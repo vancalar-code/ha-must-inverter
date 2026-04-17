@@ -1,57 +1,69 @@
 # =============================================================================
-# Volt Inverter – Panel sterowania
-# =============================================================================
-# INSTRUKCJA:
-#   1. W HA przejdź do dashboardu → Edytuj → Dodaj kartę → Ręczna karta (YAML)
-#   2. Wklej całą zawartość poniżej (od "type: vertical-stack")
-#   3. Jeśli Twoje urządzenie ma inną nazwę niż "voltultra", zamień każde
-#      wystąpienie "voltultra" na właściwą nazwę (małe litery, spacje → _)
+# Volt Inverter PH1100 – Panel sterowania
+# Urządzenie: voltultra
 # =============================================================================
 
 type: vertical-stack
 cards:
 
-  # ── Tryb pracy ──────────────────────────────────────────────────────────────
+  # ── Tryb pracy ───────────────────────────────────────────────────────────────
   - type: entities
     title: Tryb pracy
     show_header_toggle: false
     entities:
-      - entity: select.voltultra_energy_use_mode
-      - entity: select.voltultra_solar_use_aim
-      - entity: select.voltultra_charger_source_priority
-      - entity: select.voltultra_grid_protect_standard
-      - entity: switch.voltultra_charger_from_grid
-      - entity: switch.voltultra_discharger_to_grid
-      - entity: switch.voltultra_solar_power_balance
-      - entity: switch.voltultra_power_saving_mode
-
-  # ── Ładowanie / Rozładowanie ─────────────────────────────────────────────────
-  - type: entities
-    title: "Ładowanie / Rozładowanie"
-    show_header_toggle: false
-    entities:
-      - entity: number.voltultra_max_charger_current
-      - entity: number.voltultra_grid_max_charger_current
-      - entity: number.voltultra_max_combine_charger_current
-      - entity: number.voltultra_max_discharger_current
-
-  # ── Bateria ──────────────────────────────────────────────────────────────────
-  - type: entities
-    title: Bateria
-    show_header_toggle: false
-    entities:
-      - entity: select.voltultra_battery_type
-      - entity: number.voltultra_battery_capacity_ah
-
-  # ── Tryb zaawansowany ────────────────────────────────────────────────────────
-  - type: entities
-    title: "Tryb zaawansowany – domyślny"
-    show_header_toggle: false
-    entities:
+      - entity: select.voltultra_work_mode
       - entity: select.voltultra_advanced_mode_default_work_mode
+        name: Tryb domyślny (gdy Advanced)
 
+  # ── Ładowanie / Rozładowanie BMS ─────────────────────────────────────────────
   - type: entities
-    title: "Adv Mode T1"
+    title: Ładowanie / Rozładowanie
+    show_header_toggle: false
+    entities:
+      - entity: number.voltultra_maximum_charge_current
+      - entity: number.voltultra_maximum_discharge_current
+      - entity: number.voltultra_maximum_grid_charge_current
+      - entity: number.voltultra_constant_charge_voltage
+      - entity: number.voltultra_float_charge_voltage
+      - entity: number.voltultra_min_current_charge_voltage
+      - entity: number.voltultra_min_current_charge_current
+      - entity: number.voltultra_min_current_charge_soc
+
+  # ── Ochrona baterii ───────────────────────────────────────────────────────────
+  - type: entities
+    title: Ochrona baterii
+    show_header_toggle: false
+    entities:
+      - entity: number.voltultra_battery_low_voltage_fault
+      - entity: number.voltultra_battery_low_voltage_recover
+      - entity: number.voltultra_battery_low_voltage_alarm
+      - entity: number.voltultra_battery_soc_low_alarm
+      - entity: number.voltultra_battery_soc_low_fault
+      - entity: number.voltultra_battery_soc_low_recover
+
+  # ── Tryb użytkownika (User Mode) ──────────────────────────────────────────────
+  - type: entities
+    title: "Tryb użytkownika"
+    show_header_toggle: false
+    entities:
+      - entity: number.voltultra_user_mode_battery_voltage_max
+      - entity: number.voltultra_user_mode_battery_voltage_min
+      - entity: number.voltultra_work_mode_soc_high
+      - entity: number.voltultra_work_mode_soc_low
+
+  # ── Wyrównywanie baterii ──────────────────────────────────────────────────────
+  - type: entities
+    title: Wyrównywanie baterii
+    show_header_toggle: false
+    entities:
+      - entity: number.voltultra_eq_charge_voltage
+      - entity: number.voltultra_battery_equalization_interval
+      - entity: time.voltultra_battery_equalization_start_time
+      - entity: time.voltultra_battery_equalization_end_time
+
+  # ── Tryb zaawansowany ─────────────────────────────────────────────────────────
+  - type: entities
+    title: "Adv Mode – T1"
     show_header_toggle: false
     entities:
       - entity: time.voltultra_adv_mode_t1_start
@@ -62,7 +74,7 @@ cards:
         name: Work Mode
 
   - type: entities
-    title: "Adv Mode T2"
+    title: "Adv Mode – T2"
     show_header_toggle: false
     entities:
       - entity: time.voltultra_adv_mode_t2_start
@@ -73,7 +85,7 @@ cards:
         name: Work Mode
 
   - type: entities
-    title: "Adv Mode T3"
+    title: "Adv Mode – T3"
     show_header_toggle: false
     entities:
       - entity: time.voltultra_adv_mode_t3_start
@@ -84,7 +96,7 @@ cards:
         name: Work Mode
 
   - type: entities
-    title: "Adv Mode T4"
+    title: "Adv Mode – T4"
     show_header_toggle: false
     entities:
       - entity: time.voltultra_adv_mode_t4_start
@@ -95,7 +107,7 @@ cards:
         name: Work Mode
 
   - type: entities
-    title: "Adv Mode T5"
+    title: "Adv Mode – T5"
     show_header_toggle: false
     entities:
       - entity: time.voltultra_adv_mode_t5_start
@@ -106,7 +118,7 @@ cards:
         name: Work Mode
 
   - type: entities
-    title: "Adv Mode T6"
+    title: "Adv Mode – T6"
     show_header_toggle: false
     entities:
       - entity: time.voltultra_adv_mode_t6_start
@@ -116,30 +128,10 @@ cards:
       - entity: select.voltultra_adv_mode_t6_work_mode
         name: Work Mode
 
-  # ── Wyrównywanie baterii ─────────────────────────────────────────────────────
+  # ── BMS / Inne ────────────────────────────────────────────────────────────────
   - type: entities
-    title: "Wyrównywanie baterii"
+    title: BMS
     show_header_toggle: false
     entities:
-      - entity: switch.voltultra_battery_equalization
-      - entity: switch.voltultra_battery_equalization_immediately
-      - entity: number.voltultra_battery_equalization_voltage
-      - entity: number.voltultra_battery_equalization_time
-      - entity: number.voltultra_battery_equalization_timeout
-      - entity: number.voltultra_battery_equalization_interval
-      - entity: time.voltultra_battery_equalization_start_time
-      - entity: time.voltultra_battery_equalization_end_time
-
-  # ── Ustawienia urządzenia ─────────────────────────────────────────────────────
-  - type: entities
-    title: "Ustawienia urządzenia"
-    show_header_toggle: false
-    entities:
-      - entity: switch.voltultra_overload_restart
-      - entity: switch.voltultra_over_temperature_restart
-      - entity: switch.voltultra_overload_bypass
-      - entity: switch.voltultra_record_fault
-      - entity: switch.voltultra_auto_turn_page
-      - entity: switch.voltultra_lcd_light
-      - entity: switch.voltultra_buzz
-      - entity: switch.voltultra_grid_buzz
+      - entity: number.voltultra_bms_type
+      - entity: switch.voltultra_antireflux_enable
