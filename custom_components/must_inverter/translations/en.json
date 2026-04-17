@@ -259,7 +259,18 @@
           "solar_and_utility": "Solar and Utility",
           "only_solar": "Only Solar"
         }
-      }
+      },
+          ,
+"workmode": {
+  "name": "Work Mode",
+  "state": {
+    "store_mode": "Store Mode",
+    "load_first": "Load First",
+    "battery_first": "Battery First",
+    "grid_first": "Grid First",
+    "advanced_mode": "Advanced Mode"
+  }
+}
     },
     "sensor": {
       "absorbvoltage": { "name": "Absorb Voltage" },
