@@ -4,7 +4,7 @@ from homeassistant.components.sensor import SensorDeviceClass
 from homeassistant.const import Platform
 from typing import NamedTuple
 
-DOMAIN = "must_inverter"
+DOMAIN = "must_volt_inverter"
 
 CONF_BAUDRATE = "baudrate"
 CONF_PARITY = "parity"
