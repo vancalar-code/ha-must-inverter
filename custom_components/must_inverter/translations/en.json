@@ -213,7 +213,11 @@
       "batterystopchargingvoltage": { "name": "Battery Stop Charging Voltage" },
       "gridmaxchargercurrentset": { "name": "Grid Max Charger Current" },
       "inverterbatterylowvoltage": { "name": "Battery Low Voltage (Inverter)" },
-      "maxcombinechargercurrent": { "name": "Max Combine Charger Current" }
+      "maxcombinechargercurrent": { "name": "Max Combine Charger Current" },
+      "batteryvlowfault": { "name": "Battery Low Voltage Fault" },
+      "batteryvlowrecover": { "name": "Battery Low Voltage Recover" },
+      "maximumchargecurrent": { "name": "Maximum Charge Current" },
+      "maximumdischargecurrent": { "name": "Maximum Discharge Current" }
     },
     "select": {
       "batterytype": {
@@ -269,8 +273,17 @@
           "grid_first": "Grid First",
           "advanced_mode": "Advanced Mode"
         }
+      },
+      "advmodedefault": {
+        "name": "Advanced Mode Default Work Mode",
+        "state": {
+          "store_mode": "Store Mode",
+          "load_first": "Load First",
+          "battery_first": "Battery First",
+          "grid_first": "Grid First",
+          "advanced_mode": "Advanced Mode"
+        }
       }
-
     },
     "sensor": {
       "absorbvoltage": { "name": "Absorb Voltage" },

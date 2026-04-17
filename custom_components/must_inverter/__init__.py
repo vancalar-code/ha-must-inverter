@@ -49,6 +49,7 @@ from .mapper import (
     convert_ph1100_soc_high,
     convert_ph1100_soc_low,
     convert_ph1100_antireflux,
+    convert_ph1100_advmodedefault,
     convert_partArr2,
     convert_partArr3,
     convert_partArr4,
@@ -312,6 +313,7 @@ class MustInverter:
                 (10121, 10121, convert_ph1100_workmode),   # Work Mode
                 (10124, 10124, convert_ph1100_soc_high),   # SoC High
                 (10125, 10125, convert_ph1100_soc_low),    # SoC Low
+                (10126, 10126, convert_ph1100_advmodedefault), # Adv Mode Default
                 (10102, 10119, convert_ph1100_partArr1),   # Charger Control Messages
                 (15104, 15119, convert_ph1100_partArr2),   # Charger Display Messages
                 (20001, 20003, convert_ph1100_partArr3),   # Inverter Control Messages

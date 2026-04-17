@@ -184,11 +184,14 @@ PH1100_SENSORS = [
     # Charger Control Messages
     # Don't know what are the ranges for these settings, so skipping for now
     # Sensor(10102, "BatteryHighFaultVoltage",         0.01,    "V",      Platform.NUMBER,               NumberDeviceClass.VOLTAGE,         True,  ),
-    # Sensor(10103, "BatteryLowFaultVoltage",          0.01,    "V",      Platform.NUMBER,               NumberDeviceClass.VOLTAGE,         True,  ),
-    # Sensor(10104, "BatteryLowRecoverVoltage",        0.01,    "V",      Platform.NUMBER,               NumberDeviceClass.VOLTAGE,         True,  ),
+    Sensor(10103, "BatteryVLowFault",                0.01,    "V",      Platform.NUMBER,               NumberDeviceClass.VOLTAGE,         True,  ),
+    Sensor(10104, "BatteryVLowRecover",              0.01,    "V",      Platform.NUMBER,               NumberDeviceClass.VOLTAGE,         True,  ),
+    Sensor(10105, "MaximumChargeCurrent",            0.01,    "A",      Platform.NUMBER,               NumberDeviceClass.CURRENT,         True,  ),
+    Sensor(10106, "MaximumDischargeCurrent",         0.01,    "A",      Platform.NUMBER,               NumberDeviceClass.CURRENT,         True,  ),
     # Sensor(10110, "BatteryMinCurrentChargeVoltage",  0.01,    "V",      Platform.NUMBER,               NumberDeviceClass.VOLTAGE,         True,  ),
     # Sensor(10111, "BatteryMinCurrentChargeCurrent",  0.01,    "A",      Platform.NUMBER,               NumberDeviceClass.CURRENT,         True,  ),
     Sensor(10117, "BatteryEqualizationInterval",     1,       "day",    Platform.NUMBER,               None,                              True,  ),
+    Sensor(10126, "AdvModeDefault",                  None,    None,     Platform.SELECT,               None,                              True,  ),
     Sensor(10118, "BatteryEqualizationStartTime",    None,    None,     Platform.TIME,                 None,                              True,  ),
     Sensor(10119, "BatteryEqualizationEndTime",      None,    None,     Platform.TIME,                 None,                              True,  ),
     # Charger Display Messages
@@ -285,6 +288,7 @@ OPTIONS = {
     "MpptState": ["stop", "mppt", "current_limiting"],
     "ChargingState": ["stop", "absorb_charge", "float_charge", "equalization_charge"],
      "WorkMode": ["store_mode","load_first","battery_first","grid_first","advanced_mode"],
+     "AdvModeDefault": ["store_mode","load_first","battery_first","grid_first","advanced_mode"],
 }
 
 # fmt: off

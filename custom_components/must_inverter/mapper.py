@@ -280,6 +280,10 @@ def convert_ph1100_partArr1(partArr1):
 
     # fmt: off
     result = {}
+    result["BatteryVLowFault"] =          int16(10103, partArr1)
+    result["BatteryVLowRecover"] =        int16(10104, partArr1)
+    result["MaximumChargeCurrent"] =      int16(10105, partArr1)
+    result["MaximumDischargeCurrent"] =   int16(10106, partArr1)
     result["BatteryEqualizationInterval"] =  int16(10117, partArr1)
     result["BatteryEqualizationStartTime"] = time(10118, partArr1)
     result["BatteryEqualizationEndTime"] =   time(10119, partArr1)
@@ -420,6 +424,14 @@ def convert_ph1100_soc_low(registers):
     result = {}
     if 10125 in registers:
         result["SoCLow"] = registers[10125]
+    return result
+
+
+def convert_ph1100_advmodedefault(registers):
+    if registers is None:
+        return None
+    result = {}
+    result["AdvModeDefault"] = uint16(10126, registers)
     return result
 
 
