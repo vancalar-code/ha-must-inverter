@@ -365,7 +365,7 @@ RANGES = {
     "RTCYear":                        lambda data: Range(0,     99,     1   ),
     "RTCMonth":                       lambda data: Range(1,     12,     1   ),
     "RTCDay":                         lambda data: Range(1,     31,     1   ),
-    "RTCDayOfTheWeek":                lambda data: Range(0,     6,      1   ),
+    "RTCDayOfTheWeek":                lambda data: Range(1,     7,      1   ),
     "RTCHour":                        lambda data: Range(0,     23,     1   ),
     "RTCMinutes":                     lambda data: Range(0,     59,     1   ),
     "RTCSeconds":                     lambda data: Range(0,     59,     1   ),
