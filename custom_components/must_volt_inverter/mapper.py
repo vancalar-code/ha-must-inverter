@@ -488,3 +488,12 @@ def convert_ph1100_antireflux(registers):
     if 20213 in registers:
         result["AntirefluxEnable"] = registers[20213]
     return result
+
+
+def convert_ph1100_max_export(registers):
+    if registers is None:
+        return None
+    result = {}
+    if 20105 in registers:
+        result["MaxExportPowerPercentage"] = registers[20105]
+    return result
